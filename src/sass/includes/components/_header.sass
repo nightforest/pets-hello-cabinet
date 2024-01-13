@@ -1,0 +1,88 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: var(--blue)
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .05)
+    z-index: $z-index-2
+
+    @media ($max-xl)
+        z-index: $z-index-3
+    
+    &__container
+        display: flex
+        align-items: center
+        gap: 25px
+        padding: 25px 50px 25px 320px
+
+        @media ($max-xl)
+            padding: 25px 30px
+
+        @media ($max-md)
+            gap: 10px
+            padding: 20px 15px
+
+    &__burger
+        display: none
+
+        @media ($max-xl)
+            display: flex
+
+    &__logo
+        display: none
+        margin-right: auto
+
+        @media ($max-xl)
+            display: block
+        
+        @media ($max-lg)
+            max-width: 195px
+
+    &__actions
+        margin-left: auto
+
+        @media ($max-xl)
+            display: none
+
+    &__lang-button
+        padding: 5px 15px
+        text-transform: uppercase
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            border-color: var(--black)
+            color: var(--yellow)
+            background: var(--black)
+
+        @media ($max-xl)
+            margin-right: 0
+
+        @media ($max-lg)
+            padding: 5px
+            width: 65px
+            min-width: 65px
+            gap: 5px
+            margin-right: 0
+
+        @media ($max-md)
+            width: 40px
+            height: 40px
+            min-width: 40px
+            border-width: 1px
+            border-radius: 5px
+            font-size: 14px
+            gap: 3px
+            padding: 3px
+
+    &__create-button
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--yellow)
+            background: var(--black)
+
+        @media ($max-lg)
+            display: none

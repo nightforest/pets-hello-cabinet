@@ -1,0 +1,206 @@
+section.edit-section
+    .container.container--fluid.edit-section__container
+        .edit-section__left
+            h1.section-title.edit-section__title
+                span Edit listing
+
+            .form-wrap.edit-section__general
+                h2.form-wrap__title General
+
+                form.form(id="general-form" autocomplete="off" novalidate="novalidate")
+                    .form-block
+                        .form-block__left
+                            label.form-block__label Category
+                        
+                        .form-block__right
+                            select#selectCategory.select(name="selectCategory" aria-label="Category" required)
+                                option(value="") Category
+                                option(value="1") Cats
+                                option(value="2") Dogs
+                                option(value="3") Horses
+                                option(value="4") Other Pets
+                                option(value="5") Accessoires
+                                option(value="6") Pet Food
+                                option(value="7") Service
+                                option(value="8") Lost Animal
+
+                    .form-block
+                        .form-block__left
+                            label.form-block__label Title
+                        
+                        .form-block__right
+                            input#inputTitle.input.form__input(type="text" name="inputTitle" placeholder="title" autocomplete="off" value="Gorgeous Cockapoo Girl" required)
+                            label.form__label.form__label--bottom A great title needs at least 60 characters.
+
+                    .form-block
+                        .form-block__left
+                            label.form-block__label Description
+                        
+                        .form-block__right
+                            textarea#description.textarea.form__input(name="description" rows="7" placeholder="Description" autocomplete="off" required) 
+
+                    .form-block
+                        .form-block__left
+                            label.form-block__label Price
+                        
+                        .form-block__right
+                            .input-group
+                                input#inputPrice.input.form__input.input-group__input(type="text" name="inputPrice" placeholder="0" autocomplete="off" required)
+
+                                .input-group__pic
+                                    svg.input-group__pic-icon(width="10" height="17")
+                                        use(xlink:href="img/sprite.svg#dollar")
+
+                                .checkbox.checkbox--outline.input-group__checkbox
+                                    input.checkbox__input#checkboxNegotiable(type="checkbox" name="checkboxNegotiable" value="false")
+                                    label.checkbox__label(for="checkboxNegotiable") Negotiable
+
+                    .form-block
+                        .form-block__left
+                            label.form-block__label Country
+                        
+                        .form-block__right
+                            select#selectCountry.select(name="selectCountry" aria-label="Country" required)
+                                option(value="") Select a country
+                                option(value="1") England
+                                option(value="2") Germany
+                                option(value="3") France
+                    
+                    .form-block
+                        .form-block__left
+                            label.form-block__label City
+                        
+                        .form-block__right
+                            select#selectCity.select(name="selectCity" aria-label="City" required)
+                                option(value="") Select a city
+                                option(value="1") London
+                                option(value="2") Berlin
+                                option(value="3") Paris
+
+            .form-wrap.edit-section__seller
+                h2.form-wrap__title Seller information
+
+                form.form(id="general-form" autocomplete="off" novalidate="novalidate")
+                    .form-block
+                        .form-block__left
+                            label.form-block__label Email
+                        
+                        .form-block__right
+                            .input-group
+                                input#inputEmail.input.form__input.input-group__input.input-group__input--pr-15(type="email" name="inputEmail" placeholder="example@gmail.com" autocomplete="off" required)
+
+                                .input-group__pic
+                                    svg.input-group__pic-icon(width="22" height="18")
+                                        use(xlink:href="img/sprite.svg#email")
+                    
+                    .form-block
+                        .form-block__left
+                            label.form-block__label Phone number
+                        
+                        .form-block__right
+                            .input-group
+                                input#inputPhone.input.form__input.input-group__input.tell-input(type="text" name="inputPhone" autocomplete="off" required)
+
+                                .checkbox.checkbox--outline.input-group__checkbox
+                                    input.checkbox__input#checkboxHide(type="checkbox" name="checkboxHide" value="false")
+                                    label.checkbox__label(for="checkboxHide") Hide
+
+        .edit-section__right
+            button.button.edit-section__button.edit-section__button--hidden-xl(type="button") Save
+
+            .thumbnail.edit-section__thumbnail
+                h2.thumbnail__title Thumbnail
+
+                .thumbnail__preview
+                    .thumbnail-card
+                        picture.thumbnail-card__picture
+                            img.thumbnail-card__img(src="img/thumbnail.webp" srcset="img/thumbnail@2x.webp 2x" loading="lazy" width="242" height="238"  alt="alt")
+                        
+                        button.button.thumbnail-card__delete(type="button" arial-label="Delete")
+                            svg.button__icon(width="17" height="21")
+                                use(xlink:href="img/sprite.svg#delete")
+
+                .thumbnail__descr Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted
+
+                ul.thumbnail__list
+                    li.thumbnail__item
+                        .thumbnail-card.thumbnail-card--small
+                            picture.thumbnail-card__picture
+                                img.thumbnail-card__img(src="img/thumbnail-min.webp" srcset="img/thumbnail-min@2x.webp 2x" loading="lazy" width="89" height="88"  alt="alt")
+                            
+                            button.button.thumbnail-card__delete.thumbnail-card__delete--small(type="button" arial-label="Delete")
+                                svg.button__icon(width="11" height="13")
+                                    use(xlink:href="img/sprite.svg#delete")
+                    
+                    li.thumbnail__item
+                        .thumbnail-card.thumbnail-card--small
+                            picture.thumbnail-card__picture
+                                img.thumbnail-card__img(src="img/thumbnail-min.webp" srcset="img/thumbnail-min@2x.webp 2x" loading="lazy" width="89" height="88"  alt="alt")
+                            
+                            button.button.thumbnail-card__delete.thumbnail-card__delete--small(type="button" arial-label="Delete")
+                                svg.button__icon(width="11" height="13")
+                                    use(xlink:href="img/sprite.svg#delete")
+                    
+                    li.thumbnail__item
+                        .thumbnail-card.thumbnail-card--small
+                            picture.thumbnail-card__picture
+                                img.thumbnail-card__img(src="img/thumbnail-min.webp" srcset="img/thumbnail-min@2x.webp 2x" loading="lazy" width="89" height="88"  alt="alt")
+                            
+                            button.button.thumbnail-card__delete.thumbnail-card__delete--small(type="button" arial-label="Delete")
+                                svg.button__icon(width="11" height="13")
+                                    use(xlink:href="img/sprite.svg#delete")
+
+                    li.thumbnail__item
+                        .thumbnail-card.thumbnail-card--small
+                            picture.thumbnail-card__picture
+                                img.thumbnail-card__img(src="img/thumbnail-min.webp" srcset="img/thumbnail-min@2x.webp 2x" loading="lazy" width="89" height="88"  alt="alt")
+                            
+                            button.button.thumbnail-card__delete.thumbnail-card__delete--small(type="button" arial-label="Delete")
+                                svg.button__icon(width="11" height="13")
+                                    use(xlink:href="img/sprite.svg#delete")
+                    
+                    li.thumbnail__item
+                        .thumbnail-card.thumbnail-card--small
+                            picture.thumbnail-card__picture
+                                img.thumbnail-card__img(src="img/thumbnail-min.webp" srcset="img/thumbnail-min@2x.webp 2x" loading="lazy" width="89" height="88"  alt="alt")
+                            
+                            button.button.thumbnail-card__delete.thumbnail-card__delete--small(type="button" arial-label="Delete")
+                                svg.button__icon(width="11" height="13")
+                                    use(xlink:href="img/sprite.svg#delete")
+                    
+                    li.thumbnail__item
+                        .thumbnail-card.thumbnail-card--small
+                            picture.thumbnail-card__picture
+                                img.thumbnail-card__img(src="img/thumbnail-min.webp" srcset="img/thumbnail-min@2x.webp 2x" loading="lazy" width="89" height="88"  alt="alt")
+                            
+                            button.button.thumbnail-card__delete.thumbnail-card__delete--small(type="button" arial-label="Delete")
+                                svg.button__icon(width="11" height="13")
+                                    use(xlink:href="img/sprite.svg#delete")
+                    
+                    li.thumbnail__item
+                        .thumbnail-card.thumbnail-card--small
+                            picture.thumbnail-card__picture
+                                img.thumbnail-card__img(src="img/thumbnail-min.webp" srcset="img/thumbnail-min@2x.webp 2x" loading="lazy" width="89" height="88"  alt="alt")
+                            
+                            button.button.thumbnail-card__delete.thumbnail-card__delete--small(type="button" arial-label="Delete")
+                                svg.button__icon(width="11" height="13")
+                                    use(xlink:href="img/sprite.svg#delete")
+                    
+                    li.thumbnail__item
+                        button.thumbnail__add(type="button" aria-label="Add image")
+                            svg.thumbnail__add-icon(width="34" height="34")
+                                use(xlink:href="img/sprite.svg#create")
+
+            .info-block.edit-section__info-block
+                .info-block__header
+                    h3.info-block__title How to sell quickly?
+                
+                .info-block__body
+                    ul.check-list.check-list--light-blue.info-block__list
+                        li.check-list__item Use a brief title and description of the item
+                        li.check-list__item Make sure you post in the correct category
+                        li.check-list__item Add nice photos to your listing
+                        li.check-list__item Put a reasonable price
+                        li.check-list__item Check the item before publish
+
+            button.button.edit-section__button(type="button") Save

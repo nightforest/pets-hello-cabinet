@@ -1,0 +1,349 @@
+.modal-wrap
+    #modal-success.modal.modal--small
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="19" height="19")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                .modal__content
+                    svg.modal__icon(width="114" height="114")
+                        use(xlink:href="img/sprite.svg#success")
+                    h3.modal__title Message Sent Successfully
+                    p.modal__descr We will contact you shortly
+
+    #modal-delete.modal.modal--small
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="19" height="19")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                .modal__content
+                    h3.modal__title Are you sure you want to 
+                        br
+                        | delete this add?
+                    
+                    .modal__buttons
+                        button.button.modal__button(type="button") Yes
+                        button.button.button--outline.modal__button(type="button") Cancel
+                    
+    #modal-payment.modal.modal--big
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="19" height="19")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title Payment
+                
+                ul.modal-payment__list
+                    li.modal-payment__item
+                        .radio.modal-payment__radio
+                            input.radio__input#radio-1(type="radio" name="radio-1" value="true" checked required)
+                            label.radio__label(for="radio-1") Regular List
+                    
+                    li.modal-payment__item
+                        .radio.modal-payment__radio
+                            input.radio__input#radio-2(type="radio" name="radio-1" value="true" required)
+                            label.radio__label(for="radio-2") Highlighted List - 1 day
+
+                    li.modal-payment__item
+                        .radio.modal-payment__radio
+                            input.radio__input#radio-3(type="radio" name="radio-1" value="true" required)
+                            label.radio__label(for="radio-3") Highlighted List - 7 day
+                    
+                    li.modal-payment__item
+                        .radio.modal-payment__radio
+                            input.radio__input#radio-4(type="radio" name="radio-1" value="true" required)
+                            label.radio__label(for="radio-4") Highlighted List - 28 day
+                    
+                    li.modal-payment__item
+                        .radio.modal-payment__radio
+                            input.radio__input#radio-5(type="radio" name="radio-1" value="true" required)
+                            label.radio__label(for="radio-5") Regular List
+                    
+                    li.modal-payment__item
+                        .radio.modal-payment__radio
+                            input.radio__input#radio-6(type="radio" name="radio-1" value="true" required)
+                            label.radio__label(for="radio-6") Highlighted List - 1 day
+                    
+                    li.modal-payment__item
+                        .radio.modal-payment__radio
+                            input.radio__input#radio-7(type="radio" name="radio-1" value="true" required)
+                            label.radio__label(for="radio-7") Highlighted List - 7 day
+                    
+                    li.modal-payment__item
+                        .radio.modal-payment__radio
+                            input.radio__input#radio-8(type="radio" name="radio-1" value="true" required)
+                            label.radio__label(for="radio-8") Highlighted List - 28 day
+
+                .modal__buttons
+                    button.button.modal__button.modal__button--big(type="button") Submit
+
+
+    #modal-country.modal.modal--big
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="19" height="19")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                h3.modal__title Select a Country
+
+                ul.countries-list.countries-list--small.modal__countries-list
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#albania")
+                            | Albania
+
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#andorra")
+                            | Andorra
+
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#austria")
+                            | Austria
+
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#belgium")
+                            | Belgium
+
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#bosnia")
+                            | Bosnia and Herzegovina
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#bulgaria")
+                            | Bulgaria
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#croatia")
+                            | Croatia
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#czech-republic")
+                            | Czech Republic
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#denmark")
+                            | Denmark
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#estonia")
+                            | Estonia
+
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#finland")
+                            | Finland
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#france")
+                            | France
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#germany")
+                            | Germany
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#greece")
+                            | Greece
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#hungary")
+                            | Hungary
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#iceland")
+                            | Iceland
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#ireland")
+                            | Ireland
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#italy")
+                            | Italy
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#latvia")
+                            | Latvia
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#liechtenstein")
+                            | Liechtenstein
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#lithuania")
+                            | Lithuania
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#luxembourg")
+                            | Luxembourg
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#macedonia")
+                            | Macedonia
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#malta")
+                            | Malta
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#monaco")
+                            | Monaco
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#montenegro")
+                            | Montenegro
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#netherlands")
+                            | Netherlands
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#norway")
+                            | Norway
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#poland")
+                            | Poland
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#portugal")
+                            | Portugal
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#romania")
+                            | Romania
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#san-marino")
+                            | San Marino
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#slovakia")
+                            | Slovakia
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#slovenia")
+                            | Slovenia
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#spain")
+                            | Spain
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#sweden")
+                            | Sweden
+                    
+                    li.countries-list__item
+                        a.countries-list__link(href="#") 
+                            svg.countries-list__flag(width="35" height="23")
+                                use(xlink:href="img/flags.svg#switzerland")
+                            | Switzerland
+
+    #modal-search.modal
+        .modal__inner
+            .modal__window
+                button.modal__close(aria-label="Close modal" data-modal-close type="button")
+                    svg.modal__close-icon(width="19" height="19")
+                        use(xlink:href="img/sprite.svg#close-modal")
+
+                form.form(id="modal-search-form" autocomplete="off" novalidate="novalidate")
+                    h3.form__title Search
+
+                    .form__group
+                        select#selectCategoryModal.select(name="selectCategoryModal" aria-label="Category" required)
+                            option(value="") Category
+                            option(value="1") Cats
+                            option(value="2") Dogs
+                            option(value="3") Horses
+                            option(value="4") Other Pets
+                            option(value="5") Accessoires
+                            option(value="6") Pet Food
+                            option(value="7") Service
+                            option(value="8") Lost Animal
+
+                    .form__group
+                        input#inputWhatModal.input.form__input(type="text" name="inputWhatModal" placeholder="What?" autocomplete="off" required)
+
+                    .form__group
+                        input#inputWhereModal.input.form__input.input--location(type="text" name="inputWhereModal" placeholder="Where?" autocomplete="off" required)
+
+                    .form__group
+                        button.button.form__button.form__button--big Search
+                            svg.button__icon(width="22" height="22")
+                                use(xlink:href="img/sprite.svg#search")
+

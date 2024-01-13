@@ -1,0 +1,144 @@
+.photos
+    padding: 30px 40px
+    border-radius: 10px
+    border: 1px solid #E2E2E2
+    background: var(--white)
+
+    @media ($max-md)
+        padding: 15px
+
+    &__title
+        font-size: 24px
+        font-weight: 700
+        margin: 0 0 20px
+
+        @media ($max-md)
+            font-size: 18px
+            text-align: center
+
+    &__row
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 40px
+        margin-bottom: 30px
+
+        @media ($max-md)
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 20px
+            margin-bottom: 15px
+
+    &__preview
+        position: relative
+        grid-column: 4 span
+        display: flex
+        background: url("data:image/svg+xml,%3Csvg width='52' height='51' viewBox='0 0 52 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26 37.5527C30.5434 37.5527 34.2266 33.9404 34.2266 29.4844C34.2266 25.0283 30.5434 21.416 26 21.416C21.4566 21.416 17.7734 25.0283 17.7734 29.4844C17.7734 33.9404 21.4566 37.5527 26 37.5527Z' fill='black' fill-opacity='0.24'/%3E%3Cpath d='M38.0135 9.06445L37.4877 6.48626C37.2039 5.09432 35.9474 4.08398 34.5 4.08398H17.4978C16.0506 4.08398 14.7939 5.09432 14.5102 6.48626L13.9844 9.06445H38.0135Z' fill='black' fill-opacity='0.24'/%3E%3Cpath d='M47.4297 12.0527C43.8524 12.0527 6.24447 12.0527 4.57031 12.0527C2.05024 12.0527 0 14.0635 0 16.5352V42.4336C0 44.9052 2.05024 46.916 4.57031 46.916H47.4297C49.9498 46.916 52 44.9052 52 42.4336V16.5352C52 14.0635 49.9498 12.0527 47.4297 12.0527ZM13 21.416H8.125C7.28366 21.416 6.60156 20.747 6.60156 19.9219C6.60156 19.0967 7.28366 18.4277 8.125 18.4277H13C13.8413 18.4277 14.5234 19.0967 14.5234 19.9219C14.5234 20.747 13.8413 21.416 13 21.416ZM26 40.541C19.7838 40.541 14.7266 35.5811 14.7266 29.4844C14.7266 23.3877 19.7838 18.4277 26 18.4277C32.2162 18.4277 37.2734 23.3877 37.2734 29.4844C37.2734 35.5811 32.2162 40.541 26 40.541Z' fill='black' fill-opacity='0.24'/%3E%3C/svg%3E%0A") no-repeat center center
+        background-size: 50%
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10)
+        border-radius: 10px
+        min-height: 240px
+
+        @media ($max-md)
+            width: 190px
+            height: 190px
+            min-height: 190px
+
+    &-card
+        position: relative
+        width: 100%
+        height: 100%
+        display: flex
+
+        &:hover,
+        &:active,
+        &:focus-visible
+
+            .photos-card__delete
+                opacity: 1
+                visibility: visible
+
+        &__picture
+            display: flex
+            width: 100%
+            height: 100%
+            border-radius: 10px
+            overflow: hidden
+        
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+        &__delete
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 45px
+            height: 45px
+            padding: 5px
+            transform: translate3d(-50%, -50%, 0)
+            opacity: 0
+            visibility: hidden
+            transition: all .5s ease
+
+    &__descr
+        text-align: center
+        font-size: 16px
+        font-weight: 400
+        line-height: 1.25
+        color: #8E8E8E
+
+        @media ($max-md)
+            font-size: 12px
+            line-height: 1.4
+    
+    &__list
+        grid-column: 8 span
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        grid-template-rows: repeat(12, 1fr)
+        gap: 15px
+        margin: 0
+        padding: 0
+        list-style: none
+        
+        @media ($max-md)
+            gap: 12px
+    
+    &__item
+        position: relative
+        grid-column: 3 span
+        grid-row: 6 span
+        background: url("data:image/svg+xml,%3Csvg width='52' height='51' viewBox='0 0 52 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26 37.5527C30.5434 37.5527 34.2266 33.9404 34.2266 29.4844C34.2266 25.0283 30.5434 21.416 26 21.416C21.4566 21.416 17.7734 25.0283 17.7734 29.4844C17.7734 33.9404 21.4566 37.5527 26 37.5527Z' fill='black' fill-opacity='0.24'/%3E%3Cpath d='M38.0135 9.06445L37.4877 6.48626C37.2039 5.09432 35.9474 4.08398 34.5 4.08398H17.4978C16.0506 4.08398 14.7939 5.09432 14.5102 6.48626L13.9844 9.06445H38.0135Z' fill='black' fill-opacity='0.24'/%3E%3Cpath d='M47.4297 12.0527C43.8524 12.0527 6.24447 12.0527 4.57031 12.0527C2.05024 12.0527 0 14.0635 0 16.5352V42.4336C0 44.9052 2.05024 46.916 4.57031 46.916H47.4297C49.9498 46.916 52 44.9052 52 42.4336V16.5352C52 14.0635 49.9498 12.0527 47.4297 12.0527ZM13 21.416H8.125C7.28366 21.416 6.60156 20.747 6.60156 19.9219C6.60156 19.0967 7.28366 18.4277 8.125 18.4277H13C13.8413 18.4277 14.5234 19.0967 14.5234 19.9219C14.5234 20.747 13.8413 21.416 13 21.416ZM26 40.541C19.7838 40.541 14.7266 35.5811 14.7266 29.4844C14.7266 23.3877 19.7838 18.4277 26 18.4277C32.2162 18.4277 37.2734 23.3877 37.2734 29.4844C37.2734 35.5811 32.2162 40.541 26 40.541Z' fill='black' fill-opacity='0.24'/%3E%3C/svg%3E%0A") no-repeat center center
+        background-size: 35%
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10)
+        border-radius: 10px
+        width: 100%
+        height: 100%
+
+        @media ($max-md)
+            grid-column: 4 span
+            grid-row: 4 span
+
+    &__add
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 100%
+        border: 1px solid var(--white)
+        color: #E2E2E2
+        background: var(--white)
+        border-radius: 10px
+        transition: all .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            border-color: var(--yellow)
+            color: var(--yellow)
+
+        &-icon
+            max-width: 35%
+            height: auto

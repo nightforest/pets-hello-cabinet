@@ -1,0 +1,62 @@
+aside.sidebar
+    .sidebar__panel
+        .sidebar__inner
+            .logo.sidebar__logo
+                a.logo__link(href="#" aria-label="logo")
+                    svg.logo__img(width="268" height="43")
+                        use(xlink:href="img/sprite.svg#logo-white")
+
+            .sidebar-block
+                .sidebar-block__header
+                    h3.sidebar-block__title My listings
+                    svg.sidebar-block__arrow(width="16" height="8")
+                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+                
+                nav.sidebar-menu.sidebar-block__menu
+                    ul.sidebar-menu__list
+                        li.sidebar-menu__item
+                            a.sidebar-menu__link.is-active(href="create-listings-1.html")
+                                svg.sidebar-menu__icon(width="27" height="27")
+                                    use(xlink:href="img/sprite.svg#create")
+                                span.sidebar-menu__title Create listing
+
+
+                        li.sidebar-menu__item
+                            a.sidebar-menu__link(href="index.html")
+                                svg.sidebar-menu__icon(width="27" height="27")
+                                    use(xlink:href="img/sprite.svg#list")
+                                span.sidebar-menu__title My listings
+                                span.sidebar-menu__count 1
+
+                        li.sidebar-menu__item
+                            a.sidebar-menu__link(href="favorite.html")
+                                svg.sidebar-menu__icon(width="27" height="27")
+                                    use(xlink:href="img/sprite.svg#favorite")
+                                span Favourite listings
+                                span.sidebar-menu__count 0
+
+                        li.sidebar-menu__item
+                            a.sidebar-menu__link(href="messenger.html")
+                                svg.sidebar-menu__icon(width="27" height="27")
+                                    use(xlink:href="img/sprite.svg#messages")
+                                span.sidebar-menu__title Messenger
+            
+            .sidebar-block
+                .sidebar-block__header
+                    h3.sidebar-block__title My ACCOUNT
+                    svg.sidebar-block__arrow(width="16" height="8")
+                        use(xlink:href="img/sprite.svg#dropdown-arrow")
+                
+                nav.sidebar-menu.sidebar-block__menu
+                    ul.sidebar-menu__list
+                        li.sidebar-menu__item
+                            a.sidebar-menu__link(href="account.html")
+                                svg.sidebar-menu__icon(width="27" height="27")
+                                    use(xlink:href="img/sprite.svg#settings")
+                                span.sidebar-menu__title My account
+
+                        li.sidebar-menu__item
+                            a.sidebar-menu__link(href="#")
+                                svg.sidebar-menu__icon(width="27" height="27")
+                                    use(xlink:href="img/sprite.svg#logout")
+                                span.sidebar-menu__title Log out

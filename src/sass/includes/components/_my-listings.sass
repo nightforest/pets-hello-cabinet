@@ -1,0 +1,327 @@
+.my-listings
+    position: relative
+    padding: 40px
+    border-radius: 10px
+    border: 1px solid #E2E2E2
+    background: var(--white)
+    overflow: hidden
+
+    @media ($max-lg)
+        padding: 30px 20px
+
+    @media ($max-md)
+        padding: 25px 15px
+        overflow: visible
+
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 15px
+        margin-bottom: 40px
+
+        @media ($max-xxl)
+            flex-direction: column
+            align-items: stretch
+            // justify-content: stretch
+
+        @media ($max-xl)
+            flex-direction: row
+            align-items: center
+
+        @media ($max-md)
+            flex-direction: column
+            margin-bottom: 10px
+
+    &__title
+        
+        @media ($max-md)
+            text-align: center
+
+    &__sub-title
+        font-size: 24px
+        font-weight: 700
+        line-height: 1.2
+        margin: 0 0 30px
+
+    &__options
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 10px
+        margin: 0
+        padding: 0
+        list-style: none
+
+        &-item
+
+            &:last-child
+                width: 100%
+
+    &__delete
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 10px
+        border: 1px solid #E2E2E2
+        height: 65px
+        border-radius: 10px
+        padding: 5px 20px
+        color: var(--black)
+        font-size: 18px
+        font-weight: 400
+        outline: none
+        transition: all .5s ease
+
+        @media ($max-xxl)
+            height: 50px
+            font-size: 16px
+        
+        @media ($max-md)
+            height: 40px
+            padding: 5px 15px
+
+        &-icon
+
+            @media ($max-md)
+                width: 21px
+                height: 21px
+
+        span
+
+            @media ($max-md)
+                display: none
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            outline: none
+            color: var(--black)
+            border-color: var(--yellow)
+
+    &__search
+        width: 330px
+
+        @media (max-width: 1500px)
+            width: 220px
+
+        @media ($max-xxl)
+            width: 100%
+
+        @media ($max-md)
+            display: none
+
+        .search__input
+
+            @media ($max-xxl)
+                height: 50px
+                font-size: 16px
+
+    &__search-toggle
+        display: none
+        align-items: center
+        justify-content: center
+        gap: 10px
+        border: 1px solid #E2E2E2
+        height: 40px
+        border-radius: 10px
+        padding: 5px 15px
+        color: var(--black)
+        font-size: 18px
+        font-weight: 400
+        outline: none
+        transition: all .5s ease
+
+        @media ($max-md)
+            display: flex
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            outline: none
+            color: var(--black)
+            border-color: var(--yellow)
+
+    &__table-wrap
+        overflow-x: auto
+        padding-bottom: 15px
+        scrollbar-width: thin
+        scrollbar-color: var(--blue) var(--light-blue)
+
+        @media ($max-md)
+            display: none
+
+        &:not(:last-child)
+            margin-bottom: 20px
+
+        &::-webkit-scrollbar
+            height: 6px
+
+        &::-webkit-scrollbar-track
+            background: var(--light-blue)
+            border-radius: 6px
+
+        &::-webkit-scrollbar-thumb
+            border: none
+            background-color: var(--blue)
+            border-radius: 6px
+            
+    &__table
+        width: 100%
+        max-width: 100%
+        min-width: 1000px
+        border-collapse: separate
+        border-spacing: 0
+
+        thead
+            tr
+                th
+                    background: #f4f4f4
+                    font-size: 20px
+                    font-weight: 300
+                    padding: 20px 5px
+                    text-align: center
+                    line-height: 1.2
+
+                    &:first-child
+                        border-radius: 10px 0 0 10px
+
+                    &:last-child
+                        border-radius: 0 10px 10px 0
+
+                    &.align-left
+                        text-align: left
+            
+        tbody
+            tr
+                td
+                    padding: 15px 5px
+                    line-height: 1.2
+                    transition: background-color .5s ease
+
+                    &:first-child
+                        border-radius: 10px 0 0 10px
+
+                    &:last-child
+                        border-radius: 0 10px 10px 0
+
+                &:hover
+
+                    td
+                        background: var(--light-blue)
+    
+    &__checkbox
+        width: 32px
+        height: 32px
+        margin: 0 auto
+
+    &__picture
+        display: flex
+        width: 110px
+        height: 87px
+        border-radius: 10px
+        overflow: hidden
+        margin: 0 auto
+    
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    
+    &__product-title
+        margin: 0
+        font-size: 18px
+        font-weight: 700
+
+    &__link
+        color: var(--black)
+        transition: color .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--yellow)
+
+    &__price
+        font-size: 18px
+        font-weight: 700
+        text-align: center
+
+    &__info
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 3px
+
+        @media ($max-md)
+            margin-bottom: 5px
+            gap: 0 8px
+
+        &-item
+            display: flex
+            align-items: center
+            gap: 5px
+            font-weight: 300
+
+            @media ($max-md)
+                font-size: 12px
+                gap: 3px
+        
+        &-icon
+            color: var(--blue)
+
+            @media ($max-md)
+                height: 10px
+                width: auto
+
+        &-flag
+            border-radius: 2px
+
+            @media ($max-md)
+                height: 10px
+                width: auto
+    
+    &__status
+        font-size: 18px
+        font-weight: 500
+        text-align: center
+
+        &--orange
+            color: var(--orange)
+        
+        &--red
+            color: var(--red)
+        
+        &--green
+            color: var(--green)
+    
+    &__switch
+        display: flex
+        justify-content: center
+
+    &__list
+        display: none
+        margin: 0 -15px 25px
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            display: block
+
+    &__item
+
+        &:nth-child(even)
+
+            .product-card
+                background: var(--light-blue)
+
+                .product-card__dropdown
+                    background: var(--light-blue)
+
+                .checkbox__label
+
+                    &:before
+                        background: var(--white)

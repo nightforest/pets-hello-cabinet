@@ -1,0 +1,209 @@
+section.messenger-section
+    .container.container--fluid.messenger-section__container
+        h1.section-title.messenger-section__title
+            span Messenger
+
+        .messenger-section__row
+            .messenger-section__left
+                .messenger-dialogs
+                    form.search.messenger-dialogs__search(id="search-form" autocomplete="off" novalidate="novalidate")
+                        .search__group
+                            input#inputSearch.input.search__input(type="text" name="inputSearch" placeholder="Search" autocomplete="off" required)
+
+                            button.search__button
+                                svg.search__icon(width="22" height="22")
+                                    use(xlink:href="img/sprite.svg#search")
+                    
+                    ul.messenger-dialogs__list
+                        li.messenger-dialogs__item
+                            a.messenger-dialog(href="#")
+                                .messenger-dialog__user.is-online
+                                    picture.messenger-dialog__picture
+                                        img.messenger-dialog__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="56" height="56" alt="alt")
+                                
+                                .messenger-dialog__info
+                                    h4.messenger-dialog__name Katie Mizu
+                                    p.messenger-dialog__text.messenger-dialog__text--bold Cool, Will let you know ASAP!
+
+                                .messenger-dialog__count 1
+
+                        li.messenger-dialogs__item
+                            a.messenger-dialog(href="#")
+                                .messenger-dialog__user
+                                    picture.messenger-dialog__picture
+                                        img.messenger-dialog__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="56" height="56" alt="alt")
+                                
+                                .messenger-dialog__info
+                                    h4.messenger-dialog__name Katie Mizu
+                                    p.messenger-dialog__text Cool, Will let you know ASAP!
+
+                                .messenger-dialog__time 2 hours
+                        
+                        li.messenger-dialogs__item
+                            a.messenger-dialog(href="#")
+                                .messenger-dialog__user
+                                    picture.messenger-dialog__picture
+                                        img.messenger-dialog__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="56" height="56" alt="alt")
+                                
+                                .messenger-dialog__info
+                                    h4.messenger-dialog__name Katie Mizu
+                                    p.messenger-dialog__text Cool, Will let you know ASAP! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, fugiat.
+
+                                .messenger-dialog__time 2 hours
+                        
+                        li.messenger-dialogs__item
+                            a.messenger-dialog(href="#")
+                                .messenger-dialog__user
+                                    picture.messenger-dialog__picture
+                                        img.messenger-dialog__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="56" height="56" alt="alt")
+                                
+                                .messenger-dialog__info
+                                    h4.messenger-dialog__name Katie Mizu
+                                    p.messenger-dialog__text Cool, Will let you know ASAP!
+
+                                .messenger-dialog__time 2 hours 
+                        
+                        li.messenger-dialogs__item
+                            a.messenger-dialog(href="#")
+                                .messenger-dialog__user
+                                    picture.messenger-dialog__picture
+                                        img.messenger-dialog__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="56" height="56" alt="alt")
+                                
+                                .messenger-dialog__info
+                                    h4.messenger-dialog__name Katie Mizu
+                                    p.messenger-dialog__text Cool, Will let you know ASAP!
+
+                                .messenger-dialog__time 2 hours
+
+                        li.messenger-dialogs__item
+                            a.messenger-dialog(href="#")
+                                .messenger-dialog__user
+                                    picture.messenger-dialog__picture
+                                        img.messenger-dialog__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="56" height="56" alt="alt")
+                                
+                                .messenger-dialog__info
+                                    h4.messenger-dialog__name Katie Mizu
+                                    p.messenger-dialog__text Cool, Will let you know ASAP!
+
+                                .messenger-dialog__time 2 hours
+
+                        li.messenger-dialogs__item
+                            a.messenger-dialog(href="#")
+                                .messenger-dialog__user
+                                    picture.messenger-dialog__picture
+                                        img.messenger-dialog__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="56" height="56" alt="alt")
+                                
+                                .messenger-dialog__info
+                                    h4.messenger-dialog__name Katie Mizu
+                                    p.messenger-dialog__text Cool, Will let you know ASAP!
+
+                                .messenger-dialog__time 2 hours
+
+            .messenger-section__right
+                .messenger-app
+                    .messenger-app__header
+                        .messenger-profile
+                            .messenger-profile__user.is-online
+                                picture.messenger-profile__picture
+                                    img.messenger-profile__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="56" height="56" alt="alt")
+                            
+                            .messenger-profile__info
+                                h4.messenger-profile__name Jimoni Wong
+                                p.messenger-profile__status Active
+                        
+                        button.button.messenger-app__delete(type="button" arial-label="Delete")
+                            svg.button__icon(width="17" height="21")
+                                use(xlink:href="img/sprite.svg#delete")
+                    
+                    .messenger-app__body
+                        .messenger-app__date 5 November 2023
+
+                        .messenger-message
+                            .messenger-profile.messenger-message__profile
+                                .messenger-profile__user
+                                    picture.messenger-profile__picture
+                                        img.messenger-profile__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="50" height="50" alt="alt")
+                                
+                                .messenger-profile__info.messenger-profile__info--inline
+                                    h4.messenger-profile__name Jimoni Wong
+                                    date.messenger-profile__time 2 min
+                            
+                            ul.messenger-message__list
+                                li.messenger-message__item
+                                    .messenger-quote Wow thank you!
+                                
+                                li.messenger-message__item
+                                    .messenger-quote You should come to my house lol!
+                                        
+                            .messenger-message__status Viewed
+
+                        .messenger-message.messenger-message--right
+                            .messenger-profile.messenger-message__profile
+                                .messenger-profile__user
+                                    picture.messenger-profile__picture
+                                        img.messenger-profile__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="50" height="50" alt="alt")
+                                
+                                .messenger-profile__info.messenger-profile__info--inline
+                                    h4.messenger-profile__name Jimoni Wong
+                                    date.messenger-profile__time 2 min
+                            
+                            ul.messenger-message__list
+                                li.messenger-message__item
+                                    .messenger-quote Wow thank you!
+                                
+                                li.messenger-message__item
+                                    .messenger-quote You should come to my house lol! Lorem ipsum dolor sit amet
+                                        
+                            .messenger-message__status Viewed
+                        
+                        .messenger-message
+                            .messenger-profile.messenger-message__profile
+                                .messenger-profile__user
+                                    picture.messenger-profile__picture
+                                        img.messenger-profile__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="50" height="50" alt="alt")
+                                
+                                .messenger-profile__info.messenger-profile__info--inline
+                                    h4.messenger-profile__name Jimoni Wong
+                                    date.messenger-profile__time 2 min
+                            
+                            ul.messenger-message__list
+                                li.messenger-message__item
+                                    .messenger-quote Wow thank you!
+                                
+                                li.messenger-message__item
+                                    .messenger-quote You should come to my house lol!
+                                        
+                            .messenger-message__status Viewed
+
+                        .messenger-message.messenger-message--right
+                            .messenger-profile.messenger-message__profile
+                                .messenger-profile__user
+                                    picture.messenger-profile__picture
+                                        img.messenger-profile__img(src="img/messenger-avatar.webp" srcset="img/messenger-avatar@2x.webp 2x" loading="lazy" width="50" height="50" alt="alt")
+                                
+                                .messenger-profile__info.messenger-profile__info--inline
+                                    h4.messenger-profile__name Jimoni Wong
+                                    date.messenger-profile__time 2 min
+                            
+                            ul.messenger-message__list
+                                li.messenger-message__item
+                                    .messenger-quote Wow thank you!
+                                
+                                li.messenger-message__item
+                                    .messenger-quote You should come to my house lol! Lorem ipsum dolor sit amet
+                                        
+                            .messenger-message__status Viewed
+
+                    .messenger-app__footer
+                        form.messenger-form
+                            .messenger-form__group
+                                textarea#yourMessage.textarea.messenger-form__textarea(name="yourMessage" rows="1" placeholder="Type message here..." required)
+
+                                button.messenger-form__attach(type="button" arial-label="Attach file")
+                                    svg.messenger-form__attach-icon(width="22" height="20")
+                                        use(xlink:href="img/sprite.svg#attach")
+                                
+                                button.messenger-form__send(type="button" arial-label="Attach file")
+                                    svg.messenger-form__send-icon(width="20" height="20")
+                                        use(xlink:href="img/sprite.svg#send")
+

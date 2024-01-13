@@ -1,0 +1,47 @@
+.payment
+    padding: 35px 40px 40px
+    border-radius: 10px
+    border: 1px solid #E2E2E2
+    background: var(--white)
+
+    @media ($max-md)
+        padding: 15px 15px 25px
+
+    &__title
+        font-size: 24px
+        font-weight: 700
+        margin: 0 0 20px
+
+        @media ($max-md)
+            font-size: 18px
+            text-align: center
+    
+    &__list
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 15px
+        margin: 0 0 30px
+        padding: 0
+        list-style: none
+
+        @media ($max-md)
+            flex-direction: column
+            gap: 20px
+
+        &--blue
+            flex-direction: column
+            justify-content: flex-start
+            background: var(--light-blue)
+            margin: 0
+            padding: 20px 15px
+            border-radius: 10px
+            gap: 30px
+
+            @media ($max-md)
+                gap: 20px
+
+            .radio__label
+
+                &:before
+                    background: var(--white)

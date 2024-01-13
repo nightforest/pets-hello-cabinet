@@ -1,0 +1,52 @@
+section.premium-section
+    .container.container--fluid.premium-section__container
+        h1.section-title.premium-section__title
+            span Premium
+
+        .premium-section__row
+            .premium-section__left
+                ul.steps.premium-section__steps
+                    li.steps__item.is-active Account
+                    li.steps__item.is-active Buy Premium
+                    li.steps__item Finish
+
+                .premium-section__inner
+                    h2.premium-section__sub-title Premium
+                    
+                    .premium-section__text
+                        p 20% discount on all listing promotions
+                        p Labeling as a Premium partner
+
+                    ul.premium-section__list
+                        li.premium-section__item
+                            .radio.premium-section__radio
+                                input.radio__input#radio-1(type="radio" name="radio-1" value="true" checked required)
+                                label.radio__label(for="radio-1")
+                                    span Try for 1 month for free
+                                    span $ 0.00
+                        
+                        li.premium-section__item
+                            .radio.premium-section__radio
+                                input.radio__input#radio-2(type="radio" name="radio-1" value="true" required)
+                                label.radio__label(for="radio-2")
+                                    span 1 month
+                                    span $ 15.99
+                        
+                        li.premium-section__item
+                            .radio.premium-section__radio
+                                input.radio__input#radio-3(type="radio" name="radio-1" value="true" required)
+                                label.radio__label(for="radio-3")
+                                    span 3 months
+                                    span $ 38.38
+                        
+                        li.premium-section__item
+                            .radio.premium-section__radio
+                                input.radio__input#radio-4(type="radio" name="radio-1" value="true" required)
+                                label.radio__label(for="radio-4")
+                                    span 12 months
+                                    span $ 115.13
+
+                .premium-section__buttons
+                    button.button.premium-section__button(type="button") Try for Free!
+
+            .premium-section__right

@@ -1,0 +1,41 @@
+section.create-section
+    .container.container--fluid.create-section__container
+        h1.section-title.create-section__title
+            span Create listing
+
+        .create-section__row
+            .create-section__left
+                ul.steps.create-section__steps
+                    li.steps__item.is-active General
+                    li.steps__item.is-active Photos
+                    li.steps__item.is-active Payment
+                    li.steps__item.is-active Finish
+
+                .success.create-section__success
+                    svg.success__icon(width="109" height="97")
+                        use(xlink:href="img/sprite.svg#success")
+                    h2.success__title Thank You! Your add is added to Pending Approval
+                    
+                .create-section__buttons.create-section__buttons--center
+                    button.button.create-section__button(type="button") Go to My Listings
+
+            .create-section__right
+                .steps-card.create-section__steps-card
+                    picture.steps-card__picture
+                        img.steps-card__img(src="img/steps-icon-1.webp" srcset="img/steps-icon-1@2x.webp 2x" loading="lazy" width="112" height="112" alt="alt")
+                        
+                    .steps-card__content
+                        h3.steps-card__title Create New Listing
+                        p.steps-card__descr Do you have something to sell, to rent, any service to offer or a job offer? Post it at Pet 4 You, its free, for local business and very easy to use!
+
+                .info-block.create-section__info-block
+                    .info-block__header
+                        h3.info-block__title How to sell quickly?
+                    
+                    .info-block__body
+                        ul.check-list.check-list--light-blue.info-block__list
+                            li.check-list__item Use a brief title and description of the item
+                            li.check-list__item Make sure you post in the correct category
+                            li.check-list__item Add nice photos to your listing
+                            li.check-list__item Put a reasonable price
+                            li.check-list__item Check the item before publish

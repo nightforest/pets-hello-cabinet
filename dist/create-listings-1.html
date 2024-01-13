@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <!--base(href="/")-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- Title -->
+        <title>Create listings Page 1</title>
+        <!-- SEO Meta -->
+        <meta name="description" content="Page description">
+        <meta name="keywords" content="keyword">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+      <script type="module" crossorigin src="/assets/main-733bf183.js"></script>
+      <link rel="stylesheet" href="/assets/main-49ec5792.css">
+    </head>
+    <body>
+        <!-- Header -->
+        
+<header class="header">
+  <div class="header__container">
+    <button class="burger header__burger" type="button" aria-label="Open mobile menu" aria-expanded="false" data-sidebar-toggle="data-sidebar-toggle">
+      <div class="burger__line"></div>
+      <div class="burger__line"></div>
+      <div class="burger__line"></div>
+    </button>
+    <div class="logo header__logo"><a class="logo__link" href="#" aria-label="logo">
+        <svg class="logo__img logo__img--hidden-md" width="235" height="37">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+        <svg class="logo__img logo__img--visible-md" width="70" height="35">
+          <use xlink:href="img/sprite.svg#logo-mobile"></use>
+        </svg></a></div>
+    <nav class="actions header__actions">
+      <ul class="actions__list">
+        <li class="actions__item"><a class="actions__button" href="messenger.html">
+            <svg class="actions__icon" width="32" height="30">
+              <use xlink:href="img/sprite.svg#messages"></use>
+            </svg><span class="actions__title">Messages</span></a></li>
+      </ul>
+    </nav><a class="button header__create-button" href="create-listings-1.html">
+      <svg class="button__icon" width="16" height="16">
+        <use xlink:href="img/sprite.svg#plus"></use>
+      </svg><span>Create listing</span></a>
+    <button class="button button--outline header__lang-button" type="button" data-modal="modal-country" aria-label="Choose language">EN
+      <svg class="button__icon" width="16" height="8">
+        <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+      </svg>
+    </button>
+    <div class="user is-dropdown">
+      <button class="user__toggle is-dropdown__toggle" type="button" aria-label="Show user dropdown menu">
+        <picture class="user__avatar"><img class="user__avatar-img" src="img/avatar.webp" srcset="img/avatar@2x.webp 2x" loading="lazy" width="65" height="65" alt="alt"/></picture>
+        <div class="user__name">Test Test</div>
+        <div class="user__count">0</div>
+        <svg class="user__arrow" width="16" height="8">
+          <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+        </svg>
+        <svg class="user__icon" width="21" height="21">
+          <use xlink:href="img/sprite.svg#profile"></use>
+        </svg>
+      </button>
+      <div class="user__dropdown">
+        <ul class="user__list">
+          <li class="user__item"><a class="user__link" href="#">
+              <div class="user-profile">
+                <picture class="user-profile__avatar"><img class="user-profile__avatar-img" src="img/avatar.webp" srcset="img/avatar@2x.webp 2x" loading="lazy" width="48" height="48" alt="alt"/></picture>
+                <div class="user-profile__descr">
+                  <div class="user-profile__name">Test Test<span class="user-profile__status">Pro</span></div>
+                  <div class="user-profile__email">example@gmail.com</div>
+                </div>
+              </div></a></li>
+          <li class="user__item"><a class="user__link" href="#">Back to main page</a></li>
+          <li class="user__item"><a class="user__link" href="#">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <!-- Main -->
+        <main id="main" class="main">
+            
+<section class="create-section">
+  <div class="container container--fluid create-section__container">
+    <h1 class="section-title create-section__title"><span>Create listing</span></h1>
+    <div class="create-section__row">
+      <div class="create-section__left">
+        <ul class="steps create-section__steps">
+          <li class="steps__item is-active">General</li>
+          <li class="steps__item">Photos</li>
+          <li class="steps__item">Payment</li>
+          <li class="steps__item">Finish</li>
+        </ul>
+        <div class="form-wrap create-section__general">
+          <h2 class="form-wrap__title">General</h2>
+          <form class="form" id="general-form" autocomplete="off" novalidate="novalidate">
+            <div class="form-block">
+              <div class="form-block__left">
+                <label class="form-block__label">Category</label>
+              </div>
+              <div class="form-block__right">
+                <select class="select" id="selectCategory" name="selectCategory" aria-label="Category" required="required">
+                  <option value="">Category</option>
+                  <option value="1">Cats</option>
+                  <option value="2">Dogs</option>
+                  <option value="3">Horses</option>
+                  <option value="4">Other Pets</option>
+                  <option value="5">Accessoires</option>
+                  <option value="6">Pet Food</option>
+                  <option value="7">Service</option>
+                  <option value="8">Lost Animal</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-block">
+              <div class="form-block__left">
+                <label class="form-block__label">Title</label>
+              </div>
+              <div class="form-block__right">
+                <input class="input form__input" id="inputTitle" type="text" name="inputTitle" placeholder="title" autocomplete="off" value="Gorgeous Cockapoo Girl" required="required"/>
+                <label class="form__label form__label--bottom">A great title needs at least 60 characters.</label>
+              </div>
+            </div>
+            <div class="form-block">
+              <div class="form-block__left">
+                <label class="form-block__label">Description</label>
+              </div>
+              <div class="form-block__right">
+                <textarea class="textarea form__input" id="description" name="description" rows="7" placeholder="Description" autocomplete="off" required="required"> </textarea>
+              </div>
+            </div>
+            <div class="form-block">
+              <div class="form-block__left">
+                <label class="form-block__label">Price</label>
+              </div>
+              <div class="form-block__right">
+                <div class="input-group">
+                  <input class="input form__input input-group__input" id="inputPrice" type="text" name="inputPrice" placeholder="0" autocomplete="off" required="required"/>
+                  <div class="input-group__pic">
+                    <svg class="input-group__pic-icon" width="10" height="17">
+                      <use xlink:href="img/sprite.svg#dollar"></use>
+                    </svg>
+                  </div>
+                  <div class="checkbox checkbox--outline input-group__checkbox">
+                    <input class="checkbox__input" id="checkboxNegotiable" type="checkbox" name="checkboxNegotiable" value="false"/>
+                    <label class="checkbox__label" for="checkboxNegotiable">Negotiable</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-block">
+              <div class="form-block__left">
+                <label class="form-block__label">Country</label>
+              </div>
+              <div class="form-block__right">
+                <select class="select" id="selectCountry" name="selectCountry" aria-label="Country" required="required">
+                  <option value="">Select a country</option>
+                  <option value="1">England</option>
+                  <option value="2">Germany</option>
+                  <option value="3">France</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-block">
+              <div class="form-block__left">
+                <label class="form-block__label">City</label>
+              </div>
+              <div class="form-block__right">
+                <select class="select" id="selectCity" name="selectCity" aria-label="City" required="required">
+                  <option value="">Select a city</option>
+                  <option value="1">London</option>
+                  <option value="2">Berlin</option>
+                  <option value="3">Paris</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="form-wrap create-section__seller">
+          <h2 class="form-wrap__title">Seller information</h2>
+          <form class="form" id="general-form" autocomplete="off" novalidate="novalidate">
+            <div class="form-block">
+              <div class="form-block__left">
+                <label class="form-block__label">Email</label>
+              </div>
+              <div class="form-block__right">
+                <div class="input-group">
+                  <input class="input form__input input-group__input input-group__input--pr-15" id="inputEmail" type="email" name="inputEmail" placeholder="example@gmail.com" autocomplete="off" required="required"/>
+                  <div class="input-group__pic">
+                    <svg class="input-group__pic-icon" width="22" height="18">
+                      <use xlink:href="img/sprite.svg#email"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-block">
+              <div class="form-block__left">
+                <label class="form-block__label">Phone number</label>
+              </div>
+              <div class="form-block__right">
+                <div class="input-group">
+                  <input class="input form__input input-group__input tell-input" id="inputPhone" type="text" name="inputPhone" autocomplete="off" required="required"/>
+                  <div class="checkbox checkbox--outline input-group__checkbox">
+                    <input class="checkbox__input" id="checkboxHide" type="checkbox" name="checkboxHide" value="false"/>
+                    <label class="checkbox__label" for="checkboxHide">Hide</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="create-section__buttons"><a class="button create-section__button" href="create-listings-2.html">Next</a></div>
+      </div>
+      <div class="create-section__right">
+        <div class="steps-card create-section__steps-card">
+          <picture class="steps-card__picture"><img class="steps-card__img" src="img/steps-icon-1.webp" srcset="img/steps-icon-1@2x.webp 2x" loading="lazy" width="112" height="112" alt="alt"/></picture>
+          <div class="steps-card__content">
+            <h3 class="steps-card__title">Create New Listing</h3>
+            <p class="steps-card__descr">Do you have something to sell, to rent, any service to offer or a job offer? Post it at Pet 4 You, its free, for local business and very easy to use!</p>
+          </div>
+        </div>
+        <div class="info-block create-section__info-block">
+          <div class="info-block__header">
+            <h3 class="info-block__title">How to sell quickly?</h3>
+          </div>
+          <div class="info-block__body">
+            <ul class="check-list check-list--light-blue info-block__list">
+              <li class="check-list__item">Use a brief title and description of the item</li>
+              <li class="check-list__item">Make sure you post in the correct category</li>
+              <li class="check-list__item">Add nice photos to your listing</li>
+              <li class="check-list__item">Put a reasonable price</li>
+              <li class="check-list__item">Check the item before publish</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        </main>
+
+        <!-- Sidebar -->
+        
+<aside class="sidebar">
+  <div class="sidebar__panel">
+    <div class="sidebar__inner">
+      <div class="logo sidebar__logo"><a class="logo__link" href="#" aria-label="logo">
+          <svg class="logo__img" width="268" height="43">
+            <use xlink:href="img/sprite.svg#logo-white"></use>
+          </svg></a></div>
+      <div class="sidebar-block">
+        <div class="sidebar-block__header">
+          <h3 class="sidebar-block__title">My listings</h3>
+          <svg class="sidebar-block__arrow" width="16" height="8">
+            <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+          </svg>
+        </div>
+        <nav class="sidebar-menu sidebar-block__menu">
+          <ul class="sidebar-menu__list">
+            <li class="sidebar-menu__item"><a class="sidebar-menu__link is-active" href="create-listings-1.html">
+                <svg class="sidebar-menu__icon" width="27" height="27">
+                  <use xlink:href="img/sprite.svg#create"></use>
+                </svg><span class="sidebar-menu__title">Create listing</span></a></li>
+            <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="index.html">
+                <svg class="sidebar-menu__icon" width="27" height="27">
+                  <use xlink:href="img/sprite.svg#list"></use>
+                </svg><span class="sidebar-menu__title">My listings</span><span class="sidebar-menu__count">1</span></a></li>
+            <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="favorite.html">
+                <svg class="sidebar-menu__icon" width="27" height="27">
+                  <use xlink:href="img/sprite.svg#favorite"></use>
+                </svg><span>Favourite listings</span><span class="sidebar-menu__count">0</span></a></li>
+            <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="messenger.html">
+                <svg class="sidebar-menu__icon" width="27" height="27">
+                  <use xlink:href="img/sprite.svg#messages"></use>
+                </svg><span class="sidebar-menu__title">Messenger</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-block__header">
+          <h3 class="sidebar-block__title">My ACCOUNT</h3>
+          <svg class="sidebar-block__arrow" width="16" height="8">
+            <use xlink:href="img/sprite.svg#dropdown-arrow"></use>
+          </svg>
+        </div>
+        <nav class="sidebar-menu sidebar-block__menu">
+          <ul class="sidebar-menu__list">
+            <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="account.html">
+                <svg class="sidebar-menu__icon" width="27" height="27">
+                  <use xlink:href="img/sprite.svg#settings"></use>
+                </svg><span class="sidebar-menu__title">My account</span></a></li>
+            <li class="sidebar-menu__item"><a class="sidebar-menu__link" href="#">
+                <svg class="sidebar-menu__icon" width="27" height="27">
+                  <use xlink:href="img/sprite.svg#logout"></use>
+                </svg><span class="sidebar-menu__title">Log out</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</aside>
+
+        <!-- Modals -->
+        
+<div class="modal-wrap">
+  <div class="modal modal--small" id="modal-success">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="19" height="19">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <svg class="modal__icon" width="114" height="114">
+            <use xlink:href="img/sprite.svg#success"></use>
+          </svg>
+          <h3 class="modal__title">Message Sent Successfully</h3>
+          <p class="modal__descr">We will contact you shortly</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--small" id="modal-delete">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="19" height="19">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <h3 class="modal__title">Are you sure you want to <br/>delete this add?</h3>
+          <div class="modal__buttons">
+            <button class="button modal__button" type="button">Yes</button>
+            <button class="button button--outline modal__button" type="button">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--big" id="modal-payment">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="19" height="19">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Payment</h3>
+        <ul class="modal-payment__list">
+          <li class="modal-payment__item">
+            <div class="radio modal-payment__radio">
+              <input class="radio__input" id="radio-1" type="radio" name="radio-1" value="true" checked="checked" required="required"/>
+              <label class="radio__label" for="radio-1">Regular List</label>
+            </div>
+          </li>
+          <li class="modal-payment__item">
+            <div class="radio modal-payment__radio">
+              <input class="radio__input" id="radio-2" type="radio" name="radio-1" value="true" required="required"/>
+              <label class="radio__label" for="radio-2">Highlighted List - 1 day</label>
+            </div>
+          </li>
+          <li class="modal-payment__item">
+            <div class="radio modal-payment__radio">
+              <input class="radio__input" id="radio-3" type="radio" name="radio-1" value="true" required="required"/>
+              <label class="radio__label" for="radio-3">Highlighted List - 7 day</label>
+            </div>
+          </li>
+          <li class="modal-payment__item">
+            <div class="radio modal-payment__radio">
+              <input class="radio__input" id="radio-4" type="radio" name="radio-1" value="true" required="required"/>
+              <label class="radio__label" for="radio-4">Highlighted List - 28 day</label>
+            </div>
+          </li>
+          <li class="modal-payment__item">
+            <div class="radio modal-payment__radio">
+              <input class="radio__input" id="radio-5" type="radio" name="radio-1" value="true" required="required"/>
+              <label class="radio__label" for="radio-5">Regular List</label>
+            </div>
+          </li>
+          <li class="modal-payment__item">
+            <div class="radio modal-payment__radio">
+              <input class="radio__input" id="radio-6" type="radio" name="radio-1" value="true" required="required"/>
+              <label class="radio__label" for="radio-6">Highlighted List - 1 day</label>
+            </div>
+          </li>
+          <li class="modal-payment__item">
+            <div class="radio modal-payment__radio">
+              <input class="radio__input" id="radio-7" type="radio" name="radio-1" value="true" required="required"/>
+              <label class="radio__label" for="radio-7">Highlighted List - 7 day</label>
+            </div>
+          </li>
+          <li class="modal-payment__item">
+            <div class="radio modal-payment__radio">
+              <input class="radio__input" id="radio-8" type="radio" name="radio-1" value="true" required="required"/>
+              <label class="radio__label" for="radio-8">Highlighted List - 28 day</label>
+            </div>
+          </li>
+        </ul>
+        <div class="modal__buttons">
+          <button class="button modal__button modal__button--big" type="button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--big" id="modal-country">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="19" height="19">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Select a Country</h3>
+        <ul class="countries-list countries-list--small modal__countries-list">
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#albania"></use>
+              </svg>Albania</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#andorra"></use>
+              </svg>Andorra</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#austria"></use>
+              </svg>Austria</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#belgium"></use>
+              </svg>Belgium</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#bosnia"></use>
+              </svg>Bosnia and Herzegovina</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#bulgaria"></use>
+              </svg>Bulgaria</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#croatia"></use>
+              </svg>Croatia</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#czech-republic"></use>
+              </svg>Czech Republic</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#denmark"></use>
+              </svg>Denmark</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#estonia"></use>
+              </svg>Estonia</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#finland"></use>
+              </svg>Finland</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#france"></use>
+              </svg>France</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#germany"></use>
+              </svg>Germany</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#greece"></use>
+              </svg>Greece</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#hungary"></use>
+              </svg>Hungary</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#iceland"></use>
+              </svg>Iceland</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#ireland"></use>
+              </svg>Ireland</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#italy"></use>
+              </svg>Italy</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#latvia"></use>
+              </svg>Latvia</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#liechtenstein"></use>
+              </svg>Liechtenstein</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#lithuania"></use>
+              </svg>Lithuania</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#luxembourg"></use>
+              </svg>Luxembourg</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#macedonia"></use>
+              </svg>Macedonia</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#malta"></use>
+              </svg>Malta</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#monaco"></use>
+              </svg>Monaco</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#montenegro"></use>
+              </svg>Montenegro</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#netherlands"></use>
+              </svg>Netherlands</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#norway"></use>
+              </svg>Norway</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#poland"></use>
+              </svg>Poland</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#portugal"></use>
+              </svg>Portugal</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#romania"></use>
+              </svg>Romania</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#san-marino"></use>
+              </svg>San Marino</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#slovakia"></use>
+              </svg>Slovakia</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#slovenia"></use>
+              </svg>Slovenia</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#spain"></use>
+              </svg>Spain</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#sweden"></use>
+              </svg>Sweden</a></li>
+          <li class="countries-list__item"><a class="countries-list__link" href="#"> 
+              <svg class="countries-list__flag" width="35" height="23">
+                <use xlink:href="img/flags.svg#switzerland"></use>
+              </svg>Switzerland</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-search">
+    <div class="modal__inner">
+      <div class="modal__window">
+        <button class="modal__close" aria-label="Close modal" data-modal-close="data-modal-close" type="button">
+          <svg class="modal__close-icon" width="19" height="19">
+            <use xlink:href="img/sprite.svg#close-modal"></use>
+          </svg>
+        </button>
+        <form class="form" id="modal-search-form" autocomplete="off" novalidate="novalidate">
+          <h3 class="form__title">Search</h3>
+          <div class="form__group">
+            <select class="select" id="selectCategoryModal" name="selectCategoryModal" aria-label="Category" required="required">
+              <option value="">Category</option>
+              <option value="1">Cats</option>
+              <option value="2">Dogs</option>
+              <option value="3">Horses</option>
+              <option value="4">Other Pets</option>
+              <option value="5">Accessoires</option>
+              <option value="6">Pet Food</option>
+              <option value="7">Service</option>
+              <option value="8">Lost Animal</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <input class="input form__input" id="inputWhatModal" type="text" name="inputWhatModal" placeholder="What?" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__group">
+            <input class="input form__input input--location" id="inputWhereModal" type="text" name="inputWhereModal" placeholder="Where?" autocomplete="off" required="required"/>
+          </div>
+          <div class="form__group">
+            <button class="button form__button form__button--big">Search
+              <svg class="button__icon" width="22" height="22">
+                <use xlink:href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+    </body>
+</html>

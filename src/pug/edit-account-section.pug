@@ -1,0 +1,181 @@
+section.account-section
+    .container.container--fluid.account-section__container
+        header.account-section__header
+            h1.section-title.account-section__title
+                span Edit Account
+
+        .account.account-section__account
+            .account__header
+                .account-user
+                    picture.account-user__avatar
+                        img.account-user__img(src="img/avatar-big.webp" srcset="img/avatar-big@2x.webp 2x" loading="lazy" width="154" height="154"  alt="alt")
+                
+                    h2.account-user__name Test Test
+
+                ul.account-options
+                    li.account-options__item
+                        button.button.button--blue.account-options__button(type="button")
+                            svg.button__icon(width="21" height="21")
+                                use(xlink:href="img/sprite.svg#email")
+                            span.button__count 0
+                            span mail
+                    
+                    li.account-options__item
+                        button.button.button--blue.account-options__button(type="button")
+                            svg.button__icon(width="21" height="13")
+                                use(xlink:href="img/sprite.svg#eye")
+                            span.button__count 0
+                            span visit
+                    
+                    li.account-options__item
+                        button.button.button--blue.account-options__button(type="button")
+                            svg.button__icon(width="21" height="21")
+                                use(xlink:href="img/sprite.svg#list")
+                            span.button__count 0
+                            span listing
+                    
+                    li.account-options__item
+                        button.button.button--blue.account-options__button(type="button")
+                            svg.button__icon(width="21" height="21")
+                                use(xlink:href="img/sprite.svg#profile")
+                            span.button__count 0
+                            span favorite
+                    
+                    li.account-options__item
+                        a.button.account-options__button(href="account.html") Watch my profile
+
+        .account-section__row
+            .account-section__left
+                .form-wrap.account-section__details
+                    h2.form-wrap__title Account Details
+
+                    form.form(id="details-form" autocomplete="off" novalidate="novalidate")
+                        .form-block
+                            .form-block__left
+                                label.form-block__label Gender
+                            
+                            .form-block__right
+                                select#selectGender.select(name="selectGender" aria-label="Gender" required)
+                                    option(value="") Gender
+                                    option(value="1") Male
+                                    option(value="2") Female
+
+                        .form-block
+                            .form-block__left
+                                label.form-block__label Name
+                            
+                            .form-block__right
+                                input#inputName.input.form__input(type="text" name="inputName" placeholder="Name" autocomplete="off" required)
+
+                        .form-block
+                            .form-block__left
+                                label.form-block__label Username
+                            
+                            .form-block__right
+                                input#inputUsername.input.form__input(type="text" name="inputUsername" placeholder="Username" autocomplete="off" required)
+
+                        .form-block
+                            .form-block__left
+                                label.form-block__label Description
+                            
+                            .form-block__right
+                                textarea#description1.textarea.form__input(name="description1" rows="7" placeholder="Description" autocomplete="off" required) 
+
+                        .form-block
+                            .form-block__left
+                                label.form-block__label Email
+                            
+                            .form-block__right
+                                .input-group
+                                    input#inputEmail1.input.form__input.input-group__input.input-group__input--pr-15(type="email" name="inputEmail1" placeholder="example@gmail.com" autocomplete="off" required)
+
+                                    .input-group__pic
+                                        svg.input-group__pic-icon(width="22" height="18")
+                                            use(xlink:href="img/sprite.svg#email")
+                        
+                        .form-block
+                            .form-block__left
+                                label.form-block__label Phone number
+                            
+                            .form-block__right
+                                .input-group
+                                    input#inputPhone1s.input.form__input.input-group__input.tell-input(type="text" name="inputPhone1" autocomplete="off" required)
+
+                                    .checkbox.checkbox--outline.input-group__checkbox
+                                        input.checkbox__input#checkboxHide1(type="checkbox" name="checkboxHide1" value="false")
+                                        label.checkbox__label(for="checkboxHide1") Hide
+
+                        .form-block
+                            .form-block__left
+
+                            .form-block__right
+                                button.button.form__button Save
+
+                .form-wrap.account-section__status
+                    h2.form-wrap__title.form-wrap__title--md-center Premium status
+
+                    .account-status
+                        h3.account-status__title You don`t have an active 
+                            strong Premium
+                            |  now.
+                        a.button.account-status__button(href="premium.html") Try for free
+
+                .form-wrap.edit-section__settings
+                    h2.form-wrap__title Settings
+
+                    form.form(id="settings-form" autocomplete="off" novalidate="novalidate")
+                        .form-block
+                            .form-block__left
+                                label.form-block__label New Password
+                            
+                            .form-block__right
+                                input#inputNewPassword.input.form__input(type="password" name="inputNewPassword" placeholder="title" autocomplete="off" required)
+
+                        .form-block
+                            .form-block__left
+                                label.form-block__label Confirm Password
+                            
+                            .form-block__right
+                                input#inputConfirmPassword.input.form__input(type="password" name="inputConfirmPassword" placeholder="title" autocomplete="off" required)
+                        
+                        .form-block
+                            .form-block__left
+
+                            .form-block__right
+                                .checkbox.form-block__checkbox
+                                    input.checkbox__input#checkboxAccept(type="checkbox" name="checkboxAccept" checked value="false")
+                                    label.checkbox__label(for="checkboxAccept") I accept to receive marketing emails
+                        .form-block
+                            .form-block__left
+                                label.form-block__label Preferred Time Zone
+                            
+                            .form-block__right
+                                select#selectTimeZone.select(name="selectTimeZone" aria-label="Time Zone" required)
+                                    option(value="") Select a Time Zone
+                                    option(value="1") +1
+                                    option(value="2") +2
+                                    option(value="3") +3
+
+                                label.form__label.form__label--bottom NOTE: If no preferred time zone is selected, the Country's preferred time zone will be used (e.g. "UTC" for United Kingdom).
+                                    
+            .account-section__right
+                .account-photo
+                    h3.account-photo__title Photo or Avatar
+
+                    .account-photo__preview
+                        //- picture.account-photo__picture
+                        //-     img.account-photo__img(src="img/thumbnail.webp" srcset="img/thumbnail@2x.webp 2x" loading="lazy" width="242" height="238"  alt="alt")
+
+                    .account-photo__descr Set the photo or avatar image. Only *.png, *.jpg and *.jpeg image files are accepted
+
+                    ul.account-photo__options
+                        li.account-photo__options-item
+                            button.button.account-photo__button(type="button" arial-label="Delete")
+                                svg.button__icon(width="28" height="28")
+                                    use(xlink:href="img/sprite.svg#delete")
+                        
+                        li.account-photo__options-item
+                            button.button.button--outline.account-photo__button(type="button" arial-label="Delete")
+                                svg.button__icon(width="28" height="28")
+                                    use(xlink:href="img/sprite.svg#zoom")
+                        

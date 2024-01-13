@@ -1,0 +1,69 @@
+.create-section
+    padding: 50px 0
+
+    @media ($max-lg)
+        padding: 30px 0
+
+    &__title
+        margin-bottom: 35px
+
+        @media ($max-lg)
+            margin-bottom: 20px
+
+        @media ($max-md)
+            text-align: center
+
+    &__row
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 50px
+
+        @media ($max-xxl)
+            display: flex
+            flex-direction: column
+    
+    &__left
+        grid-column: 8 span
+    
+    &__right
+        grid-column: 4 span
+
+        @media ($max-xxl)
+            display: none
+
+    &__general
+        margin-bottom: 30px
+
+    &__seller
+        margin-bottom: 30px
+
+    &__buttons
+        text-align: right
+
+        &--center
+            text-align: center
+
+    &__button
+        max-width: 290px
+        width: 100%
+
+        @media ($max-sm)
+            max-width: 100%
+
+    &__steps
+        margin-bottom: 25px
+
+        @media ($max-lg)
+            margin-bottom: 20px
+
+    &__steps-card
+        margin-bottom: 30px
+
+    &__photos
+        margin-bottom: 30px
+
+    &__payment
+        margin-bottom: 30px
+
+    &__success
+        margin-bottom: 30px

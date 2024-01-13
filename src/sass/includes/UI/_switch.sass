@@ -1,0 +1,120 @@
+.switch
+    padding: 0
+    margin: 0
+    line-height: 1
+
+    &__label
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 55px
+        height: 55px
+        border-radius: 10px
+        font-size: 12px
+        line-height: 1.4
+        font-weight: 300
+        margin: 0
+        cursor: pointer
+        user-select: none
+        transition: all .5s ease
+        background: var(--red)
+
+        @media ($max-md)
+            width: 35px
+            height: 35px
+            border-radius: 5px
+
+        &::before
+            position: relative
+            display: block
+            width: 35px
+            height: 18px
+            background: var(--white)
+            border-radius: 15px
+            transition: all .5s ease
+            content: ""
+
+            @media ($max-md)
+                width: 22px
+                height: 12px
+
+        &::after
+            position: absolute
+            top: calc(50% - 7px)
+            left: 7px
+            width: 14px
+            height: 14px
+            background: var(--red)
+            border-radius: 50%
+            transition: all .5s ease
+            content: ""
+
+            @media ($max-md)
+                top: calc(50% - 5px)
+                left: 1px
+                width: 10px
+                height: 10px
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            color: var(--yellow)
+
+    &__input
+        position: absolute
+        opacity: 0
+        z-index: -1
+
+        // Checked
+        &:checked + .switch__label
+            background: var(--green)
+
+        &:checked + .switch__label::before
+            background: var(--white)
+
+        &:checked + .switch__label::after
+            transform: translateX(22px)
+            background: var(--green)
+
+            @media ($max-md)
+                transform: translateX(16px)
+
+        // Not Checked
+        &:not(:checked) + .switch__label::after
+            right: auto
+            left: 12px
+
+            @media ($max-md)
+                left: 8px
+
+        // Hover
+        &:not(:disabled):not(:checked) + .switch__label:hover::before
+            background: var(--white)
+
+        // Active
+        &:not(:disabled):active + .switch__label::before
+            background: var(--blue)
+
+        // Focus
+        &:focus-visible + .switch__label::before
+            background: var(--yellow)
+
+        &:focus-visible:not(:checked) + .switch__label::before
+            background: var(--yellow)
+
+        // Disabled
+        &:disabled
+
+            &:not(:checked) + .switch__label::before
+                box-shadow: none
+                border-color: var(--grey-disabled)
+
+            &:checked + .switch__label
+                &::before
+                    box-shadow: none
+                    border-color: var(--grey-disabled)
+                    background: var(--grey-disabled)
+
+            + .switch__label
+                color: var(--grey-disabled)

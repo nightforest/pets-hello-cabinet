@@ -1,0 +1,297 @@
+section.listings-section
+    .container.container--fluid.listings-section__container
+        .my-listings
+            header.my-listings__header
+                h1.section-title.my-listings__title
+                    span Favourite listings
+
+                ul.my-listings__options
+                    li.my-listings__options-item
+                        .checkbox.checkbox--outline
+                            input.checkbox__input#selectAllCheckbox(type="checkbox" name="selectAllCheckbox" value="false")
+                            label.checkbox__label(for="selectAllCheckbox") Select: All
+                    
+                    li.my-listings__options-item
+                        button.my-listings__delete(type="button")
+                            span Delete
+                            svg.my-listings__delete-icon(width="23" height="27")
+                                use(xlink:href="img/sprite.svg#delete")
+
+                    li.my-listings__options-item
+                        form.search.my-listings__search(id="search-form" autocomplete="off" novalidate="novalidate")
+                            .search__group
+                                input#inputSearch.input.search__input(type="text" name="inputSearch" placeholder="Search" autocomplete="off" required)
+
+                                button.search__button
+                                    svg.search__icon(width="22" height="22")
+                                        use(xlink:href="img/sprite.svg#search")
+                        
+                        button.my-listings__search-toggle(type="button" data-modal="modal-search" aria-label="Open search modal")
+                            svg.my-listings__search-toggle-icon(width="18" height="18")
+                                use(xlink:href="img/sprite.svg#search")
+
+            .my-listings__table-wrap
+                table.my-listings__table
+                    thead
+                        tr
+                            th
+                            th Photo
+                            th.align-left Title
+                            th Price
+                            th Location
+                            th Options
+                    
+                    tbody
+                        tr
+                            td
+                                .checkbox.checkbox--single.my-listings__checkbox
+                                    input.checkbox__input#checkbox-1(type="checkbox" name="checkbox-1" value="false")
+                                    label.checkbox__label(for="checkbox-1")
+
+                            td
+                                picture.my-listings__picture
+                                    img.my-listings__img(src="img/my-listings-img.webp" srcset="img/my-listings-img@2x.webp 2x" loading="lazy" width="110" height="87"  alt="alt")
+
+                            td
+                                h3.my-listings__product-title
+                                    a.my-listings__link(href="#") Gorgeous Cockapoo Girl
+                            
+                            td
+                                .my-listings__price 120 $
+
+                            td
+                                ul.my-listings__info
+                                    li.my-listings__info-item
+                                        svg.my-listings__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+                                
+                            td
+                                ul.options.my-listings__options
+                                    li.options__item
+                                        button.options__button(type="button" aria-label="Delete")
+                                            svg.options__icon(width="23" height="27")
+                                                use(xlink:href="img/sprite.svg#delete")
+
+                        tr
+                            td
+                                .checkbox.checkbox--single.my-listings__checkbox
+                                    input.checkbox__input#checkbox-2(type="checkbox" name="checkbox-2" value="false")
+                                    label.checkbox__label(for="checkbox-2")
+
+                            td
+                                picture.my-listings__picture
+                                    img.my-listings__img(src="img/my-listings-img.webp" srcset="img/my-listings-img@2x.webp 2x" loading="lazy" width="110" height="87"  alt="alt")
+
+                            td
+                                h3.my-listings__product-title
+                                    a.my-listings__link(href="#") Gorgeous Cockapoo Girl
+                            
+                            td
+                                .my-listings__price 140 $
+
+                            td
+                                ul.my-listings__info
+                                    li.my-listings__info-item
+                                        svg.my-listings__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+                                
+                            td
+                                ul.options.my-listings__options
+                                    li.options__item
+                                        button.options__button(type="button" aria-label="Delete")
+                                            svg.options__icon(width="23" height="27")
+                                                use(xlink:href="img/sprite.svg#delete")
+
+                        tr
+                            td
+                                .checkbox.checkbox--single.my-listings__checkbox
+                                    input.checkbox__input#checkbox-3(type="checkbox" name="checkbox-3" value="false")
+                                    label.checkbox__label(for="checkbox-3")
+
+                            td
+                                picture.my-listings__picture
+                                    img.my-listings__img(src="img/my-listings-img.webp" srcset="img/my-listings-img@2x.webp 2x" loading="lazy" width="110" height="87"  alt="alt")
+
+                            td
+                                h3.my-listings__product-title
+                                    a.my-listings__link(href="#") Gorgeous Cockapoo Girl
+                            
+                            td
+                                .my-listings__price 110 $
+
+                            td
+                                ul.my-listings__info
+                                    li.my-listings__info-item
+                                        svg.my-listings__info-icon(width="14" height="18")
+                                            use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+  
+                            td
+                                ul.options.my-listings__options
+                                    li.options__item
+                                        button.options__button(type="button" aria-label="Delete")
+                                            svg.options__icon(width="23" height="27")
+                                                use(xlink:href="img/sprite.svg#delete")
+
+            ul.my-listings__list
+                li.my-listings__item
+                    .product-card.is-dropdown
+                        .checkbox.checkbox--single.product-card__checkbox
+                            input.checkbox__input#checkbox-4(type="checkbox" name="checkbox-4" value="false")
+                            label.checkbox__label(for="checkbox-4")
+
+                        .product-card__header
+                            picture.product-card__picture
+                                img.product-card__img(src="img/my-listings-img.webp" srcset="img/my-listings-img@2x.webp 2x" loading="lazy" width="110" height="87"  alt="alt")
+
+                            .product-card__descr
+                                h3.product-card__title
+                                    a.product-card__link(href="#") Gorgeous Cockapoo Girl
+                                
+                                .product-card__price 120 $
+                            
+                            button.product-card__more.is-dropdown__toggle(type="button")
+                                svg.product-card__more-icon(width="16" height="8")
+                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+                        
+                        .product-card__dropdown
+                            .product-card__row
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        .product-card__info-pic
+                                            svg.product-card__info-icon(width="12" height="15")
+                                                use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+                                
+                                ul.options.product-card__options
+                                    li.options__item
+                                        button.options__button(type="button" aria-label="Delete")
+                                            svg.options__icon(width="23" height="27")
+                                                use(xlink:href="img/sprite.svg#delete")
+
+                li.my-listings__item
+                    .product-card.is-dropdown
+                        .checkbox.checkbox--single.product-card__checkbox
+                            input.checkbox__input#checkbox-5(type="checkbox" name="checkbox-5" value="false")
+                            label.checkbox__label(for="checkbox-5")
+
+                        .product-card__header
+                            picture.product-card__picture
+                                img.product-card__img(src="img/my-listings-img.webp" srcset="img/my-listings-img@2x.webp 2x" loading="lazy" width="110" height="87"  alt="alt")
+
+                            .product-card__descr
+                                h3.product-card__title
+                                    a.product-card__link(href="#") Gorgeous Cockapoo Girl
+                                
+                                .product-card__price 120 $
+                            
+                            button.product-card__more.is-dropdown__toggle(type="button")
+                                svg.product-card__more-icon(width="16" height="8")
+                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+                        
+                        .product-card__dropdown
+                            .product-card__row
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        .product-card__info-pic
+                                            svg.product-card__info-icon(width="12" height="15")
+                                                use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+                                
+                                ul.options.product-card__options
+                                    li.options__item
+                                        button.options__button(type="button" aria-label="Delete")
+                                            svg.options__icon(width="23" height="27")
+                                                use(xlink:href="img/sprite.svg#delete")
+
+                li.my-listings__item
+                    .product-card.is-dropdown
+                        .checkbox.checkbox--single.product-card__checkbox
+                            input.checkbox__input#checkbox-6(type="checkbox" name="checkbox-6" value="false")
+                            label.checkbox__label(for="checkbox-6")
+
+                        .product-card__header
+                            picture.product-card__picture
+                                img.product-card__img(src="img/my-listings-img.webp" srcset="img/my-listings-img@2x.webp 2x" loading="lazy" width="110" height="87"  alt="alt")
+
+                            .product-card__descr
+                                h3.product-card__title
+                                    a.product-card__link(href="#") Gorgeous Cockapoo Girl
+                                
+                                .product-card__price 120 $
+                            
+                            button.product-card__more.is-dropdown__toggle(type="button")
+                                svg.product-card__more-icon(width="16" height="8")
+                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+                        
+                        .product-card__dropdown
+                            .product-card__row
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        .product-card__info-pic
+                                            svg.product-card__info-icon(width="12" height="15")
+                                                use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+                                
+                                ul.options.product-card__options
+                                    li.options__item
+                                        button.options__button(type="button" aria-label="Delete")
+                                            svg.options__icon(width="23" height="27")
+                                                use(xlink:href="img/sprite.svg#delete")
+
+                li.my-listings__item
+                    .product-card.is-dropdown
+                        .checkbox.checkbox--single.product-card__checkbox
+                            input.checkbox__input#checkbox-7(type="checkbox" name="checkbox-7" value="false")
+                            label.checkbox__label(for="checkbox-7")
+
+                        .product-card__header
+                            picture.product-card__picture
+                                img.product-card__img(src="img/my-listings-img.webp" srcset="img/my-listings-img@2x.webp 2x" loading="lazy" width="110" height="87"  alt="alt")
+
+                            .product-card__descr
+                                h3.product-card__title
+                                    a.product-card__link(href="#") Gorgeous Cockapoo Girl
+                                
+                                .product-card__price 120 $
+                            
+                            button.product-card__more.is-dropdown__toggle(type="button")
+                                svg.product-card__more-icon(width="16" height="8")
+                                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+                        
+                        .product-card__dropdown
+                            .product-card__row
+                                ul.product-card__info
+                                    li.product-card__info-item
+                                        .product-card__info-pic
+                                            svg.product-card__info-icon(width="12" height="15")
+                                                use(xlink:href="img/sprite.svg#location")
+                                        | Sheffield
+                                
+                                ul.options.product-card__options
+                                    li.options__item
+                                        button.options__button(type="button" aria-label="Delete")
+                                            svg.options__icon(width="23" height="27")
+                                                use(xlink:href="img/sprite.svg#delete")
+
+
+            nav.pagenav.my-listings__pagenav(aria-label="Page navigation")
+                ul.pagenav__list
+                    li.pagenav__item
+                        a.pagenav__arrow(href="#" aria-label="Previous")
+                            svg.pagenav__icon(width="6" height="12")
+                                use(xlink:href="img/sprite.svg#arrow-left")
+                    li.pagenav__item.is-active(aria-current="page")
+                        a.pagenav__link(href="#") 1
+                    li.pagenav__item
+                        a.pagenav__link(href="#") 2
+                    li.pagenav__item
+                        span ...
+                    li.pagenav__item
+                        a.pagenav__link(href="#") 7
+                    li.pagenav__item
+                        a.pagenav__arrow(href="#" aria-label="Next")
+                            svg.pagenav__icon(width="6" height="12")
+                                use(xlink:href="img/sprite.svg#arrow-right")

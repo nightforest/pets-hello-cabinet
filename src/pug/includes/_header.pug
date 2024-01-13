@@ -1,0 +1,63 @@
+header.header
+    .header__container
+        button.burger.header__burger(type="button" aria-label="Open mobile menu" aria-expanded="false" data-sidebar-toggle)
+            .burger__line
+            .burger__line
+            .burger__line
+
+        .logo.header__logo
+            a.logo__link(href="#" aria-label="logo")
+                svg.logo__img.logo__img--hidden-md(width="235" height="37")
+                    use(xlink:href="img/sprite.svg#logo")
+                
+                svg.logo__img.logo__img--visible-md(width="70" height="35")
+                    use(xlink:href="img/sprite.svg#logo-mobile")
+
+        nav.actions.header__actions
+            ul.actions__list
+                li.actions__item
+                    a.actions__button(href="messenger.html")
+                        svg.actions__icon(width="32" height="30")
+                            use(xlink:href="img/sprite.svg#messages")
+                        span.actions__title Messages
+        
+        a.button.header__create-button(href="create-listings-1.html")
+            svg.button__icon(width="16" height="16")
+                use(xlink:href="img/sprite.svg#plus")
+            span Create listing
+
+        button.button.button--outline.header__lang-button(type="button" data-modal="modal-country" aria-label="Choose language") EN
+            svg.button__icon(width="16" height="8")
+                use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+        .user.is-dropdown
+            button.user__toggle.is-dropdown__toggle(type="button" aria-label="Show user dropdown menu")
+                picture.user__avatar
+                    img.user__avatar-img(src="img/avatar.webp" srcset="img/avatar@2x.webp 2x" loading="lazy" width="65" height="65"  alt="alt")
+                
+                .user__name Test Test
+                .user__count 0
+                svg.user__arrow(width="16" height="8")
+                    use(xlink:href="img/sprite.svg#dropdown-arrow")
+
+                svg.user__icon(width="21" height="21")
+                    use(xlink:href="img/sprite.svg#profile")
+                
+            .user__dropdown
+                ul.user__list
+                    li.user__item
+                        a.user__link(href="#")
+                            .user-profile
+                                picture.user-profile__avatar
+                                    img.user-profile__avatar-img(src="img/avatar.webp" srcset="img/avatar@2x.webp 2x" loading="lazy" width="48" height="48"  alt="alt")
+                                
+                                .user-profile__descr
+                                    .user-profile__name Test Test
+                                        span.user-profile__status Pro
+                                    .user-profile__email example@gmail.com
+                    
+                    li.user__item
+                        a.user__link(href="#") Back to main page
+                    
+                    li.user__item
+                        a.user__link(href="#") Log out

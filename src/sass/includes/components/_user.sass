@@ -1,0 +1,176 @@
+.user
+    position: relative
+
+    &.is-active
+
+        .user__arrow
+            transform: rotateX(180deg)
+        
+        .user__dropdown
+            opacity: 1
+            visibility: visible
+            transform: translateY(0)
+
+    &__toggle
+        display: flex
+        align-items: center
+        gap: 10px
+        transition: all .5s ease
+
+        @media ($max-md)
+            justify-content: center
+            width: 40px
+            height: 40px
+            min-width: 40px
+            border-radius: 5px
+            border: 1px solid var(--black)
+            background: var(--yellow)
+            color: var(--black)
+
+        &:hover,
+        &:active,
+        &:focus-visible
+
+            .user__avatar
+                box-shadow: inset 0 0 0 2px var(--yellow)
+
+    &__icon
+        display: none
+
+        @media ($max-md)
+            display: flex
+
+    &__avatar
+        display: flex
+        height: 65px
+        width: 65px
+        min-width: 65px
+        border-radius: 50%
+        overflow: hidden
+        transition: all .5s ease
+
+        @media ($max-md)
+            display: none
+
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+
+    &__name
+        font-size: 18px
+        font-weight: 700
+
+        @media ($max-md)
+            display: none
+    
+    &__count
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        margin-left: auto
+        height: 30px
+        width: 30px
+        min-width: 30px
+        background: var(--yellow)
+        border-radius: 5px
+        line-height: 1
+        font-size: 16px
+        font-weight: 400
+        color: var(--black)
+
+        @media ($max-md)
+            display: none
+    
+    &__arrow
+        transition: transform .5s ease
+
+        @media ($max-md)
+            display: none
+
+    &__dropdown
+        position: absolute
+        top: calc(100% + 15px)
+        right: 0
+        min-width: 250px
+        border-radius: 5px
+        overflow: hidden
+        border: 1px solid #E2E2E2
+        background: var(--white)
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, .15)
+        opacity: 0
+        visibility: hidden
+        transform: translateY(10px)
+        transition: all .25s ease
+        z-index: $z-index-1
+
+    &__list
+        margin: 0
+        padding: 0
+        list-style: none
+
+    &__item
+
+        &:not(:last-child)
+            border-bottom: 1px solid #E2E2E2
+    
+    &__link
+        display: flex
+        padding: 15px
+        font-size: 18px
+        font-weight: 300
+        color: var(--black)
+        transition: all .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            background: var(--light-blue)
+            color: var(--black)
+
+    &-profile
+        display: flex
+        align-items: center
+        gap: 10px
+
+        &__avatar
+            display: flex
+            height: 48px
+            width: 48px
+            min-width: 48px
+
+            &-img
+                width: 100%
+                height: 100%
+                object-fit: cover
+
+        &__name
+            display: flex
+            align-items: center
+            gap: 6px
+            font-size: 16px
+            line-height: 1.3
+            font-weight: 700
+
+        &__status
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            height: 20px
+            width: auto
+            background: var(--yellow)
+            border-radius: 5px
+            line-height: 1
+            font-size: 10px
+            padding: 4px 8px
+            font-weight: 500
+            color: var(--black)
+        
+        &__email
+            font-size: 14px
+            color: #979797
+            font-weight: 300
+            line-height: 1.2

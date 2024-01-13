@@ -1,0 +1,32 @@
+.options
+    padding: 0
+    list-style: none
+    display: flex
+    gap: 20px
+
+    &__button
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 55px
+        height: 55px
+        min-width: 55px
+        border-radius: 10px
+        background: #F4F4F4
+        color: var(--black)
+        transition: all .5s ease
+
+        &:hover,
+        &:active,
+        &:focus-visible
+            background: var(--yellow)
+            color: var(--black)
+
+        &--wish
+            stroke: var(--black)
+            fill: transparent
+            transition: all .5s ease
+
+            &.is-active
+                stroke: var(--yellow)
+                fill: var(--yellow)

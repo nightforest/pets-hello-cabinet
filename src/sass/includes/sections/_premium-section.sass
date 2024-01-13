@@ -1,0 +1,107 @@
+.premium-section
+    padding: 50px 0
+
+    @media ($max-lg)
+        padding: 30px 0
+
+    &__title
+        margin-bottom: 35px
+
+        @media ($max-lg)
+            margin-bottom: 20px
+
+        @media ($max-md)
+            text-align: center
+    
+    &__steps
+        margin-bottom: 20px
+    
+    &__row
+        display: grid
+        grid-template-columns: repeat(12, 1fr)
+        gap: 50px
+
+        @media ($max-xxl)
+            display: flex
+            flex-direction: column
+    
+    &__left
+        grid-column: 8 span
+    
+    &__right
+        grid-column: 4 span
+
+        @media ($max-xxl)
+            display: none
+    
+    &__inner
+        padding: 40px
+        border-radius: 10px
+        border: 1px solid #E2E2E2
+        background: var(--white)
+        margin-bottom: 20px
+
+        @media ($max-md)
+            padding: 20px 15px
+
+    &__sub-title
+        font-size: 24px
+        font-weight: 700
+        line-height: 1.2
+        margin: 0 0 20px
+
+        @media ($max-md)
+            text-align: center
+            font-size: 18px
+
+    &__text
+        font-size: 20px
+        font-weight: 300
+        margin-bottom: 30px
+
+        @media ($max-md)
+            font-size: 16px
+            text-align: center
+
+        p
+            
+            @media ($max-md)
+                margin-bottom: 0.5rem
+                
+            &:last-child
+                margin-bottom: 0
+
+    &__list
+        margin: 0
+        padding: 0
+        list-style: none
+
+    &__item
+
+        &:not(:last-child)
+            margin-bottom: 25px
+
+    &__radio
+
+        .radio__label
+            display: flex
+            align-items: center
+            justify-content: space-between
+            gap: 20px
+
+            @media ($max-md)
+                font-size: 14px
+                line-height: 23px
+
+            span
+
+                &:last-child
+                    font-weight: 700
+                    white-space: nowrap
+
+    &__button
+        max-width: 290px
+        width: 100%
+
+        @media ($max-md)
+            max-width: 100%

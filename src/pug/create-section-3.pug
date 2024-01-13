@@ -1,0 +1,71 @@
+section.create-section
+    .container.container--fluid.create-section__container
+        h1.section-title.create-section__title
+            span Create listing
+
+        .create-section__row
+            .create-section__left
+                ul.steps.create-section__steps
+                    li.steps__item.is-active General
+                    li.steps__item.is-active Photos
+                    li.steps__item.is-active Payment
+                    li.steps__item Finish
+
+                .payment.create-section__payment
+                    h2.payment__title Payment
+                    
+                    ul.payment__list
+                        li.payment__item
+                            .radio.payment__radio
+                                input.radio__input#radio-1(type="radio" name="radio-3" value="true" checked required)
+                                label.radio__label(for="radio-1") Regular List
+                        
+                        li.payment__item
+                            .radio.payment__radio
+                                input.radio__input#radio-2(type="radio" name="radio-3" value="true" required)
+                                label.radio__label(for="radio-2") Highlighted List - 1 day
+
+                        li.payment__item
+                            .radio.payment__radio
+                                input.radio__input#radio-3(type="radio" name="radio-3" value="true" required)
+                                label.radio__label(for="radio-3") Highlighted List - 7 day
+                        
+                    ul.payment__list.payment__list--blue
+                        li.payment__item
+                            .radio.payment__radio
+                                input.radio__input#radio-4(type="radio" name="radio-2" value="true" checked required)
+                                label.radio__label(for="radio-4") Top page Listing - 1 day
+                        
+                        li.payment__item
+                            .radio.payment__radio
+                                input.radio__input#radio-5(type="radio" name="radio-2" value="true" required)
+                                label.radio__label(for="radio-5") Top page Listing - 7 day
+                        
+                        li.payment__item
+                            .radio.payment__radio
+                                input.radio__input#radio-6(type="radio" name="radio-2" value="true" required)
+                                label.radio__label(for="radio-6") Top page Listing - 28 day
+
+                .create-section__buttons
+                    a.button.create-section__button(href="create-listings-4.html") Next
+
+            .create-section__right
+                .steps-card.create-section__steps-card
+                    picture.steps-card__picture
+                        img.steps-card__img(src="img/steps-icon-1.webp" srcset="img/steps-icon-1@2x.webp 2x" loading="lazy" width="112" height="112" alt="alt")
+                        
+                    .steps-card__content
+                        h3.steps-card__title Create New Listing
+                        p.steps-card__descr Do you have something to sell, to rent, any service to offer or a job offer? Post it at Pet 4 You, its free, for local business and very easy to use!
+
+                .info-block.create-section__info-block
+                    .info-block__header
+                        h3.info-block__title How to sell quickly?
+                    
+                    .info-block__body
+                        ul.check-list.check-list--light-blue.info-block__list
+                            li.check-list__item Use a brief title and description of the item
+                            li.check-list__item Make sure you post in the correct category
+                            li.check-list__item Add nice photos to your listing
+                            li.check-list__item Put a reasonable price
+                            li.check-list__item Check the item before publish
